@@ -64,6 +64,18 @@ class DataController: Object {
         return coordinator
     }
     
+    // Managed Object Context
+    public lazy var managedObjectContext: NSManagedObjectContext = {
+        
+        // retrieve coordinator and create Managed Object Context
+        let coordinator = self.persistentStoreCoordinator
+        let managedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
+        
+        managedObjectContext.persistentStoreCoordinator = coordinator
+        
+        return managedObjectContext
+    }()
+    
     
 } // End Class
 
