@@ -22,7 +22,7 @@ public class DataController: NSObject {
     
     private lazy var managedObjectModel: NSManagedObjectModel = {
         
-        let modelURL = Bundle.mainBundle.URLForResource("TodoList", withExtension: "momd")!
+        let modelURL = Bundle.mainBundle.urlForResource("TodoList", withExtension: "momd")!
         
         // Force Unwrap, crash when unable to load
         return NSManagedObjectModel(contentsOfURL: modelURL)!
