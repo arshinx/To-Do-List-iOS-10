@@ -13,7 +13,11 @@ class DataController: Object {
     
     lazy var applicationDocumentsDirectory: URL = {
         
+        // let urls = FileManager.default().urlsForDirectory(directory: .documentDirectory, domainMask: .userDomainMask)
+        let urls = FileManager.defaultManager().URLsForDirectory(.documentDirectory, inDomains: .userDomainMask)
         
+        // return highest index - 1
+        return urls[urls.endIndex.predecessor]
     }()
     
     
