@@ -35,7 +35,7 @@ public class DataController: NSObject {
         let coordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
         
         // Where to save data -- persistent store
-        let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent("TodoList.sqlite")
+        let url = self.applicationDocumentsDirectory.appendingPathComponent("TodoList.sqlite")
         
         // Retrieve error and act accordingly
         do {
@@ -62,7 +62,7 @@ public class DataController: NSObject {
         }
         
         return coordinator
-    }
+    }()
     
     // Managed Object Context
     public lazy var managedObjectContext: NSManagedObjectContext = {
