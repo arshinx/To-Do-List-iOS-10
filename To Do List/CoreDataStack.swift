@@ -9,3 +9,9 @@
 import Foundation
 import CoreData
 
+class DataController: Object {
+    
+    
+    
+    
+}
