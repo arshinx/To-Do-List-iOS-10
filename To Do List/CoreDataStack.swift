@@ -28,5 +28,10 @@ class DataController: Object {
         return NSManagedObjectModel(contentsOfURL: modelURL)!
     }()
     
+    // Persistent Store Coordinator
+    private lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator = {
+        
+    }
+    
     
 }
