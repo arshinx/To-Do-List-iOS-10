@@ -11,7 +11,7 @@ import CoreData
 
 class DataController: Object {
     
-    lazy var applicationDocumentsDirectory: URL = {
+    private lazy var applicationDocumentsDirectory: URL = {
         
         // let urls = FileManager.default().urlsForDirectory(directory: .documentDirectory, domainMask: .userDomainMask)
         let urls = FileManager.defaultManager().URLsForDirectory(.documentDirectory, inDomains: .userDomainMask)
@@ -20,7 +20,7 @@ class DataController: Object {
         return urls[urls.endIndex.predecessor]
     }()
     
-    lazy var managedObjectModel: NSManagedObjectModel = {
+    private lazy var managedObjectModel: NSManagedObjectModel = {
         
         let modelURL = Bundle.mainBundle().URLForResource("TodoList", withExtension: "momd")!
         
