@@ -10,16 +10,28 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    //
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+    }
+    
+    // Actions
+    @IBAction func cancel(_ sender: AnyObject) {
+        
+        // Dismiss View Controller
     }
 
+    @IBAction func save(_ sender: AnyObject) {
+        
+        // Dismiss View Controller
+    }
 
 }
 
