@@ -31,6 +31,24 @@ class DataController: Object {
     // Persistent Store Coordinator
     private lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator = {
         
+        
+        let coordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
+        
+        // Where to save data -- persistent store
+        let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent("TodoList.sqlite")
+        
+        // Retrieve error and act accordingly
+        do {
+            try coordinator.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: nil)
+        } catch {
+            let userInfo: [String: AnyObject] = [
+                NSLocalizedDescriptionKey: "Failed to initializee the application's saved data",
+                NSLocalizedFailureReasonErrorKey: "There was an error creating or loading the application's saved data",
+                NSUnderlyingErrorKey: error as NSError
+            ]
+        }
+        
+        return coordinator
     }
     
     
