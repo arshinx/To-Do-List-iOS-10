@@ -26,11 +26,13 @@ class ViewController: UIViewController {
     @IBAction func cancel(_ sender: AnyObject) {
         
         // Dismiss View Controller
+        dismiss(animated: true, completion: nil)
     }
 
     @IBAction func save(_ sender: AnyObject) {
         
         // Dismiss View Controller
+        dismiss(animated: true, completion: nil)
     }
 
 }
