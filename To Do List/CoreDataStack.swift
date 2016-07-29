@@ -20,7 +20,10 @@ class DataController: Object {
         return urls[urls.endIndex.predecessor]
     }()
     
-    
+    lazy var managedObjectModel: NSManagedObjectModel = {
+        
+        
+    }()
     
     
 }
