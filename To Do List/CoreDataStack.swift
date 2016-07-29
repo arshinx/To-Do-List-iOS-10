@@ -25,7 +25,7 @@ public class DataController: NSObject {
         let modelURL = Bundle.main.urlForResource("TodoList", withExtension: "momd")!
         
         // Force Unwrap, crash when unable to load
-        return NSManagedObjectModel(contentsOf: modelURL)
+        return NSManagedObjectModel(contentsOf: modelURL)!
     }()
     
     // Persistent Store Coordinator
