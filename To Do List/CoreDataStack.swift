@@ -23,7 +23,7 @@ class DataController: Object {
     lazy var managedObjectModel: NSManagedObjectModel = {
         
         let modelURL = Bundle.mainBundle().URLForResource("TodoList", withExtension: "momd")!
-        return NSManagedObjectModel(contentsOfURL: modelURL)
+        return NSManagedObjectModel(contentsOfURL: modelURL)!
     }()
     
     
