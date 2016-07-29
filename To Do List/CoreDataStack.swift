@@ -39,17 +39,53 @@ class DataController: Object {
         
         // Retrieve error and act accordingly
         do {
+            // Attempt
             try coordinator.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: nil)
+            
+            // When Failed
         } catch {
+            
+            // User Info Dictionary
             let userInfo: [String: AnyObject] = [
                 NSLocalizedDescriptionKey: "Failed to initializee the application's saved data",
                 NSLocalizedFailureReasonErrorKey: "There was an error creating or loading the application's saved data",
                 NSUnderlyingErrorKey: error as NSError
             ]
+            
+            let wrappedError = NSError(domain: "com.Arshin.CoreDataError", code: 9999, userInfo: userInfo)
+            
+            // Log Error
+            print("Unresolved Error \(wrappedError), \(wrappedError.userInfo)")
+            
+            // Quit App
+            abort()
         }
         
         return coordinator
     }
     
     
-}
+} // End Class
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
