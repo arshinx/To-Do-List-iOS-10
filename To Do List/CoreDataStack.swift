@@ -11,6 +11,11 @@ import CoreData
 
 class DataController: Object {
     
+    lazy var applicationDocumentsDirectory: URL = {
+        
+        
+    }()
+    
     
     
     
