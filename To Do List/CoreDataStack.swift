@@ -40,7 +40,7 @@ public class DataController: NSObject {
         // Retrieve error and act accordingly
         do {
             // Attempt
-            try coordinator.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: nil)
+            try coordinator.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: url, options: nil)
             
             // When Failed
         } catch {
