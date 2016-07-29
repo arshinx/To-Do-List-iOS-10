@@ -33,12 +33,12 @@ public class DataController: NSObject {
         
         
         let coordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
-        
-        // Where to save data -- persistent store
-        let url = self.applicationDocumentsDirectory.appendingPathComponent("TodoList.sqlite")
-        
+            
         // Retrieve error and act accordingly
         do {
+            // Where to save data -- persistent store
+            let url = try self.applicationDocumentsDirectory.appendingPathComponent("TodoList.sqlite")
+            
             // Attempt
             try coordinator.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: url, options: nil)
             
