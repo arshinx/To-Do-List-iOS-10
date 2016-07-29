@@ -9,15 +9,15 @@
 import Foundation
 import CoreData
 
-public class DataController: Object {
+public class DataController: NSObject {
     
     private lazy var applicationDocumentsDirectory: URL = {
         
         // let urls = FileManager.default().urlsForDirectory(directory: .documentDirectory, domainMask: .userDomainMask)
-        let urls = FileManager.defaultManager().URLsForDirectory(.documentDirectory, inDomains: .userDomainMask)
+        let urls = FileManager.default.urlsForDirectory(.documentDirectory, inDomains: .userDomainMask)
         
-        // return highest index - 1
-        return urls[urls.endIndex.predecessor]
+        // return highest index - 1 <-> urls.endIndex.predecessor()
+        return urls[urls.endIndex - 1]
     }()
     
     private lazy var managedObjectModel: NSManagedObjectModel = {
