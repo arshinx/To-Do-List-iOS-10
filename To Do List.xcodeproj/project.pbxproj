@@ -15,6 +15,8 @@
 		735D1BAD1D4AD69200EB9841 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735D1BAC1D4AD69200EB9841 /* CoreDataStack.swift */; };
 		735D1BB01D4AF35800EB9841 /* TodoList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 735D1BAE1D4AF35800EB9841 /* TodoList.xcdatamodeld */; };
 		735D1BB21D4AF76400EB9841 /* TodoListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735D1BB11D4AF76400EB9841 /* TodoListController.swift */; };
+		73EB7E2F1D55550F0074A47A /* Item+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EB7E2D1D55550F0074A47A /* Item+CoreDataClass.swift */; };
+		73EB7E301D55550F0074A47A /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EB7E2E1D55550F0074A47A /* Item+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		735D1BAC1D4AD69200EB9841 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		735D1BAF1D4AF35800EB9841 /* TodoList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TodoList.xcdatamodel; sourceTree = "<group>"; };
 		735D1BB11D4AF76400EB9841 /* TodoListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoListController.swift; sourceTree = "<group>"; };
+		73EB7E2D1D55550F0074A47A /* Item+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Item+CoreDataClass.swift"; path = "../Item+CoreDataClass.swift"; sourceTree = "<group>"; };
+		73EB7E2E1D55550F0074A47A /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Item+CoreDataProperties.swift"; path = "../Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 		735D1B991D4AD47000EB9841 /* To Do List */ = {
 			isa = PBXGroup;
 			children = (
+				73EB7E2D1D55550F0074A47A /* Item+CoreDataClass.swift */,
+				73EB7E2E1D55550F0074A47A /* Item+CoreDataProperties.swift */,
 				735D1B9A1D4AD47000EB9841 /* AppDelegate.swift */,
 				735D1BAC1D4AD69200EB9841 /* CoreDataStack.swift */,
 				735D1B9C1D4AD47000EB9841 /* ViewController.swift */,
@@ -148,6 +154,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73EB7E301D55550F0074A47A /* Item+CoreDataProperties.swift in Sources */,
+				73EB7E2F1D55550F0074A47A /* Item+CoreDataClass.swift in Sources */,
 				735D1BB21D4AF76400EB9841 /* TodoListController.swift in Sources */,
 				735D1BAD1D4AD69200EB9841 /* CoreDataStack.swift in Sources */,
 				735D1B9D1D4AD47000EB9841 /* ViewController.swift in Sources */,

@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
 
     //
     @IBOutlet weak var textField: UITextField!
+    let dataController = DataController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +33,12 @@ class ViewController: UIViewController {
     }
 
     @IBAction func save(_ sender: AnyObject) {
+        
+        guard let text = textField.text else { return }
+        
+        let item = NSEntityDescription.insertNewObject(forEntityName: "Item", into: DataController.managedObjectContext) as! Item
+        
+        item.text = text
         
         // Dismiss View Controller
         dismiss(animated: true, completion: nil)
