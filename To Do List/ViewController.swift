@@ -36,6 +36,8 @@ class ViewController: UIViewController {
         
         guard let text = textField.text else { return }
         
+        // Note: Changes have been noted in memory, not saved yet.
+        
         let item = NSEntityDescription.insertNewObject(forEntityName: "Item", into: dataController.managedObjectContext) as! Item
         
         item.text = text
