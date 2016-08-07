@@ -22,7 +22,8 @@ public class DataController: NSObject {
     
     private lazy var managedObjectModel: NSManagedObjectModel = {
         
-        let modelURL = Bundle.url(forResource: "", withExtension: "", subdirectory: "", in: "")
+        // Model URL
+        let modelURL = Bundle.main.url(forResource: "TodoList", withExtension: "momd")
         
         // Force Unwrap, crash when unable to load
         return NSManagedObjectModel(contentsOf: modelURL)!
@@ -79,6 +80,7 @@ public class DataController: NSObject {
     
 } // End Class
 
+// Save Function
 
 
 
