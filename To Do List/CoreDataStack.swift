@@ -14,7 +14,7 @@ public class DataController: NSObject {
     private lazy var applicationDocumentsDirectory: URL = {
         
         // let urls = FileManager.default().urlsForDirectory(directory: .documentDirectory, domainMask: .userDomainMask)
-        let urls = FileManager.default.urlsForDirectory(.documentDirectory, inDomains: .userDomainMask)
+        let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         
         // return highest index - 1 <-> urls.endIndex.predecessor()
         return urls[urls.endIndex - 1]
@@ -22,7 +22,7 @@ public class DataController: NSObject {
     
     private lazy var managedObjectModel: NSManagedObjectModel = {
         
-        let modelURL = Bundle.main.urlForResource("TodoList", withExtension: "momd")!
+        let modelURL = Bundle.url(forResource: "", withExtension: "", subdirectory: "", in: "")
         
         // Force Unwrap, crash when unable to load
         return NSManagedObjectModel(contentsOf: modelURL)!
