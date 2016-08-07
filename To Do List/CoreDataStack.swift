@@ -11,6 +11,12 @@ import CoreData
 
 public class DataController: NSObject {
     
+    static let sharedInstance = DataController()
+    
+    private override init() {
+        
+    }
+    
     private lazy var applicationDocumentsDirectory: URL = {
         
         // let urls = FileManager.default().urlsForDirectory(directory: .documentDirectory, domainMask: .userDomainMask)
