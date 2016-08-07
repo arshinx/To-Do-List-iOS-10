@@ -83,7 +83,12 @@ public class DataController: NSObject {
         // If there are changes
         if managedObjectContext.hasChanges {
             
-            
+            // Since there may be errors, particularly with disk intensive operations, there is a throwing function
+            do {
+                
+            } catch {
+                
+            }
         }
     }
     
