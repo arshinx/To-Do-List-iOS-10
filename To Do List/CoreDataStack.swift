@@ -78,6 +78,14 @@ public class DataController: NSObject {
     }()
     
     // Save Function
+    public func saveContext() {
+        
+        // If there are changes
+        if managedObjectContext.hasChanges {
+            
+            
+        }
+    }
     
     
 } // End Class
