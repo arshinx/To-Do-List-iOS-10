@@ -86,6 +86,9 @@ public class DataController: NSObject {
             // Since there may be errors, particularly with disk intensive operations, there is a throwing function
             do {
                 
+                // Attempt to Save Data
+                try managedObjectContext.save()
+                
             } catch {
                 
             }
