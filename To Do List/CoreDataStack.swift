@@ -92,7 +92,7 @@ public class DataController: NSObject {
             } catch let error as Error {
                 
                 // Log Error
-                print("Unresolved error \(error)")
+                print("Unresolved error \(error), \(error.localizedDescription)")
             }
         }
     }
