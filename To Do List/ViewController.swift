@@ -13,7 +13,7 @@ class ViewController: UIViewController {
 
     //
     @IBOutlet weak var textField: UITextField!
-    let dataController = DataController()
+    let dataController = DataController.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
