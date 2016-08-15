@@ -11,11 +11,15 @@ import CoreData
 
 class TodoListController: UITableViewController {
     
-    lazy var fetchRequest: NSFetchRequest {
+    lazy var fetchRequest: NSFetchRequest = {
        
         // create request
         let request = NSFetchRequest(entityName: Item.identifier)
         let sortDescriptor = NSSortDescriptor(key: "text", ascending: true)
+        
+        request.sortDescriptors = [sortDescriptor]
+        
+        return request
     }()
 
     override func viewDidLoad() {
