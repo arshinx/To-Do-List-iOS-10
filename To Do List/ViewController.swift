@@ -42,6 +42,9 @@ class ViewController: UIViewController {
         
         item.text = text
         
+        // Save
+        dataController.saveContext()
+        
         // Dismiss View Controller
         dismiss(animated: true, completion: nil)
     }
