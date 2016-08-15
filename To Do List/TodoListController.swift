@@ -12,8 +12,10 @@ import CoreData
 class TodoListController: UITableViewController {
     
     lazy var fetchRequest: NSFetchRequest {
-        
-    }
+       
+        // create request
+        let request = NSFetchRequest(entityName: Item.identifier)
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
