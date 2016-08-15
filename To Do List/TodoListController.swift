@@ -27,7 +27,11 @@ class TodoListController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        do {
+            let items = try managedObjectContext.execute(fetchRequest) as! [Item]
+        } catch let error as Error {
+            print("Error Fetching Item Objects: \(error.localizedDescription)")
+        }
     }
 
     override func didReceiveMemoryWarning() {
