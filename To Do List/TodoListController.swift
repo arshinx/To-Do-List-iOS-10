@@ -29,8 +29,8 @@ class TodoListController: UITableViewController {
 
         do {
             let items = try managedObjectContext.execute(fetchRequest) as! [Item]
-        } catch let error as Error {
-            print("Error Fetching Item Objects: \(error.localizedDescription)")
+        } catch let error as NSError {
+            print("Error Fetching Item Objects: \(error.localizedDescription), \(error.userInfo)")
         }
     }
 
