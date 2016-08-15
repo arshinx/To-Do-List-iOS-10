@@ -11,6 +11,8 @@ import CoreData
 
 class TodoListController: UITableViewController {
     
+    let managedObjectContext = DataController.sharedInstance.managedObjectContext
+    
     lazy var fetchRequest: NSFetchRequest<NSFetchRequestResult> = {
        
         // create request
