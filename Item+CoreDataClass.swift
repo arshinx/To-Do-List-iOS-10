@@ -11,5 +11,8 @@ import CoreData
 
 
 public class Item: NSManagedObject {
+    
+    // Add property for simplified and easy access
+    static let identifier = "Item"
 
 }
