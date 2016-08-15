@@ -15,6 +15,7 @@ class TodoListController: UITableViewController {
        
         // create request
         let request = NSFetchRequest(entityName: Item.identifier)
+        let sortDescriptor = NSSortDescriptor(key: "text", ascending: true)
     }()
 
     override func viewDidLoad() {
