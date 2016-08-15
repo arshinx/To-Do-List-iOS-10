@@ -7,8 +7,13 @@
 //
 
 import UIKit
+import CoreData
 
 class TodoListController: UITableViewController {
+    
+    lazy var fetchRequest: NSFetchRequest {
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
