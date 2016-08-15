@@ -38,7 +38,7 @@ class ViewController: UIViewController {
         
         // Note: Changes have been noted in memory, not saved yet.
         
-        let item = NSEntityDescription.insertNewObject(forEntityName: "Item", into: dataController.managedObjectContext) as! Item
+        let item = NSEntityDescription.insertNewObject(forEntityName: Item.identifier, into: dataController.managedObjectContext) as! Item
         
         item.text = text
         
