@@ -19,10 +19,10 @@ class TodoListController: UITableViewController {
     
     let managedObjectContext = DataController.sharedInstance.managedObjectContext
     
-    lazy var fetchRequest: NSFetchRequest<NSFetchRequestResult> = {
+    lazy var fetchRequest: NSFetchRequest<Item> = {
        
         // create request
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: Item.identifier)
+        let request = NSFetchRequest<Item>(entityName: Item.identifier)
         let sortDescriptor = NSSortDescriptor(key: "text", ascending: true)
         
         request.sortDescriptors = [sortDescriptor]
@@ -34,7 +34,7 @@ class TodoListController: UITableViewController {
         super.viewDidLoad()
 
         do {
-            items = try managedObjectContext.execute(fetchRequest) as! [Item]
+            items = try managedObjectContext.fetch(fetchRequest) as [Item]
         } catch let error as NSError {
             print("Error Fetching Item Objects: \(error.localizedDescription), \(error.userInfo)")
         }
