@@ -22,6 +22,7 @@ class TodoFetchedResultsController: NSFetchedResultsController<Item>, NSFetchedR
         
         self.delegate = self
         
+        // Fetch Data
         tryFetch()
         
     }
