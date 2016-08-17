@@ -57,7 +57,7 @@ class TodoListController: UITableViewController, NSFetchedResultsControllerDeleg
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return items.count
+        return 1
     }
 
     
@@ -66,7 +66,6 @@ class TodoListController: UITableViewController, NSFetchedResultsControllerDeleg
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
         // Configure the cell
-        cell.textLabel?.text = items[indexPath.row].text
 
         return cell
     }
