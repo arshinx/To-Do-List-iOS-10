@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import CoreData
 
-class TodoFetchedResultsController: NSFetchedResultsController, NSFetchedResultsControllerDelegate {
+class TodoFetchedResultsController: NSFetchedResultsController<Item>, NSFetchedResultsControllerDelegate {
     
     private let tableView: UITableView
     
@@ -38,7 +38,7 @@ class TodoFetchedResultsController: NSFetchedResultsController, NSFetchedResults
     
     // MARK: NSFetchedResultsControllerDelegate
     
-    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<Item>) {
         tableView.reloadData()
     }
     

@@ -14,7 +14,7 @@ class TodoListController: UITableViewController, NSFetchedResultsControllerDeleg
     let managedObjectContext = DataController.sharedInstance.managedObjectContext
     
     // Fetched Results Controller of Type Item
-    lazy var fetchedResultsController: TodoFetchedResultsController<Item> = {
+    lazy var fetchedResultsController: NSFetchedResultsController<Item> = {
         
         let controller = TodoFetchedResultsController(managedObjectContext: self.managedObjectContext, withTableView: self.tableView)
         return controller
