@@ -14,7 +14,7 @@ class TodoListController: UITableViewController, NSFetchedResultsControllerDeleg
     let managedObjectContext = DataController.sharedInstance.managedObjectContext
     
     // Fetched Results Controller of Type Item
-    lazy var fetchedResultsController: NSFetchedResultsController<Item> = {
+    lazy var fetchedResultsController: TodoFetchedResultsController<Item> = {
         
         let controller = TodoFetchedResultsController(managedObjectContext: self.managedObjectContext, withTableView: self.tableView)
         return controller
@@ -24,11 +24,6 @@ class TodoListController: UITableViewController, NSFetchedResultsControllerDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        do {
-            try self.fetchedResultsController.performFetch()
-        } catch let error as NSError {
-            print("Error Fetching Item Objects: \(error.localizedDescription), \(error.userInfo)")
-        }
     }
 
     override func didReceiveMemoryWarning() {

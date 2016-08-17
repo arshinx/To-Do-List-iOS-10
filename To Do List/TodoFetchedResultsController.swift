@@ -22,6 +22,8 @@ class TodoFetchedResultsController: NSFetchedResultsController, NSFetchedResults
         
         self.delegate = self
         
+        tryFetch()
+        
     }
     
     func tryFetch() {
