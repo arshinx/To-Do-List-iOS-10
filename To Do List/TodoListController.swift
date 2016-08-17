@@ -40,6 +40,9 @@ class TodoListController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Delegate
+        fetchedResultsController.delegate = self
 
         do {
             items = try managedObjectContext.fetch(fetchRequest) as [Item]
