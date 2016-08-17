@@ -13,10 +13,22 @@ class TodoListController: UITableViewController, NSFetchedResultsControllerDeleg
     
     let managedObjectContext = DataController.sharedInstance.managedObjectContext
     
-    // Fetched Results Controller of Type Item
-    lazy var fetchedResultsController: TodoFetchedResultsController = {
+    lazy var fetchRequest: NSFetchRequest<Item> = {
+       
+        // create request
+        let request = NSFetchRequest<Item>(entityName: Item.identifier)
+        let sortDescriptor = NSSortDescriptor(key: "text", ascending: true)
         
-        let controller = TodoFetchedResultsController(managedObjectContext: self.managedObjectContext, withTableView: self.tableView)
+        request.sortDescriptors = [sortDescriptor]
+        
+        return request
+    }()
+    
+    // Fetched Results Controller of Type Item
+    lazy var fetchedResultsController: NSFetchedResultsController<Item> = {
+        
+       let controller = NSFetchedResultsController(fetchRequest: self.fetchRequest, managedObjectContext: self.managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
+        controller.delegate = self
         return controller
         
     }()
@@ -24,6 +36,11 @@ class TodoListController: UITableViewController, NSFetchedResultsControllerDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        do {
+            try self.fetchedResultsController.performFetch()
+        } catch let error as NSError {
+            print("Error Fetching Item Objects: \(error.localizedDescription), \(error.userInfo)")
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -64,6 +81,10 @@ class TodoListController: UITableViewController, NSFetchedResultsControllerDeleg
         return cell
     }
     
+    // MARK: NSFetchedResultsControllerDelegate
     
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.reloadData()
+    }
 
 }
