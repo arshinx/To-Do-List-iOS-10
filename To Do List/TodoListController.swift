@@ -75,7 +75,7 @@ class TodoListController: UITableViewController, NSFetchedResultsControllerDeleg
     // Configure and Customize Cell
     private func configureCell(cell: UITableViewCell, atIndexPath indexPath: IndexPath) -> UITableViewCell {
         
-        let item = fetchedResultsController.object(at: indexPath) as! Item
+        let item = fetchedResultsController.object(at: indexPath)
         cell.textLabel?.text = item.text
         
         return cell
