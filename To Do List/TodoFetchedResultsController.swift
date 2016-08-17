@@ -12,6 +12,14 @@ import CoreData
 
 class TodoFetchedResultsController: NSFetchedResultsController, NSFetchedResultsControllerDelegate {
     
+    private let tableView: UITableView
     
+    init(managedObjectContext: NSManagedObjectContext, withTableView tableView: UITableView) {
+        
+        self.tableView = tableView
+        
+        super.init(fetchRequest: Item.fetchRequest, managedObjectContext: managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
+        
+    }
     
 }
