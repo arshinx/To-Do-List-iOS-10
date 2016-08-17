@@ -12,4 +12,6 @@ import CoreData
 
 class TodoFetchedResultsController: NSFetchedResultsController, NSFetchedResultsControllerDelegate {
     
+    
+    
 }
