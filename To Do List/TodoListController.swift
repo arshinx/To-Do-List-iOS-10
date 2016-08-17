@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class TodoListController: UITableViewController {
+class TodoListController: UITableViewController, NSFetchedResultsControllerDelegate {
     
     var items: [Item] = [] {
         didSet {
