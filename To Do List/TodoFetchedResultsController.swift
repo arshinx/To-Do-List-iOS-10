@@ -9,3 +9,7 @@
 import Foundation
 import UIKit
 import CoreData
+
+class TodoFetchedResultsController: NSFetchedResultsController, NSFetchedResultsControllerDelegate {
+    
+}
