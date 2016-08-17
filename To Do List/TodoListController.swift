@@ -68,15 +68,14 @@ class TodoListController: UITableViewController, NSFetchedResultsControllerDeleg
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
-        // Configure the cell
-
-        return cell
+        // Return Configured the cell
+        return configureCell(cell: cell, atIndexPath: indexPath)
     }
     
     // Configure and Customize Cell
-    private func configureCell(cell: UITableViewCell, atIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    private func configureCell(cell: UITableViewCell, atIndexPath indexPath: IndexPath) -> UITableViewCell {
         
-        let item = fetchedResultsController.object(at: indexPath as IndexPath)
+        let item = fetchedResultsController.object(at: indexPath) as! Item
         cell.textLabel?.text = item.text
         
         return cell
