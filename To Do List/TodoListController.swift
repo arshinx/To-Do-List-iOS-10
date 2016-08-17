@@ -71,6 +71,11 @@ class TodoListController: UITableViewController, NSFetchedResultsControllerDeleg
 
         return cell
     }
+    
+    // Configure and Customize Cell
+    private func configureCell(cell: UITableViewCell, atIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+    }
  
 
 }
