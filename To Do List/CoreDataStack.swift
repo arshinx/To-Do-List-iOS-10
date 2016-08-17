@@ -95,7 +95,7 @@ public class DataController: NSObject {
                 // Attempt to Save Data
                 try managedObjectContext.save()
                 
-            } catch let error as Error {
+            } catch let error {
                 
                 // Log Error
                 print("Unresolved error \(error), \(error.localizedDescription)")
