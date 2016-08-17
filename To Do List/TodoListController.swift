@@ -11,12 +11,6 @@ import CoreData
 
 class TodoListController: UITableViewController, NSFetchedResultsControllerDelegate {
     
-    var items: [Item] = [] {
-        didSet {
-            tableView.reloadData()
-        }
-    }
-    
     let managedObjectContext = DataController.sharedInstance.managedObjectContext
     
     lazy var fetchRequest: NSFetchRequest<Item> = {
