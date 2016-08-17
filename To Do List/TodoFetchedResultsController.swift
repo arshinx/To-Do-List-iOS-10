@@ -24,4 +24,12 @@ class TodoFetchedResultsController: NSFetchedResultsController, NSFetchedResults
         
     }
     
+    func tryFetch() {
+        do {
+            try performFetch()
+        } catch let error as NSError {
+            print("Unresolved Error: \(error), \(error.userInfo)")
+        }
+    }
+    
 }
