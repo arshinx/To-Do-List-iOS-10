@@ -34,15 +34,13 @@ class TodoListController: UITableViewController {
     lazy var fetchedResultsController: NSFetchedResultsController<Item> = {
         
        let controller = NSFetchedResultsController(fetchRequest: self.fetchRequest, managedObjectContext: self.managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
+        controller.delegate = self
         return controller
         
     }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Delegate
-        fetchedResultsController.delegate = self
 
         do {
             items = try managedObjectContext.fetch(fetchRequest) as [Item]
