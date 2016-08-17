@@ -70,10 +70,6 @@ class TodoListController: UITableViewController, NSFetchedResultsControllerDeleg
         return cell
     }
     
-    // MARK: NSFetchedResultsControllerDelegate
     
-    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        tableView.reloadData()
-    }
 
 }
