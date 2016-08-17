@@ -20,6 +20,8 @@ class TodoFetchedResultsController: NSFetchedResultsController, NSFetchedResults
         
         super.init(fetchRequest: Item.fetchRequest, managedObjectContext: managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
         
+        self.delegate = self
+        
     }
     
 }
