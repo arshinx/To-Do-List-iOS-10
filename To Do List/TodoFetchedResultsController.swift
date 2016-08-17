@@ -39,7 +39,7 @@ class TodoFetchedResultsController: NSFetchedResultsController<Item>, NSFetchedR
     
     // MARK: NSFetchedResultsControllerDelegate
     
-    func controllerDidChangeContent(_ controller: NSFetchedResultsController<Item>) {
+    private func controllerDidChangeContent(_ controller: NSFetchedResultsController<Item>) {
         tableView.reloadData()
     }
     
