@@ -52,12 +52,14 @@ class TodoListController: UITableViewController, NSFetchedResultsControllerDeleg
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         
-        return 1
+        return fetchedResultsController.sections?.count ?? 0
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 1
+        guard let section = fetchedResultsController.sections?[section] else { return 0 }
+        
+        return section.numberOfObjects
     }
 
     
