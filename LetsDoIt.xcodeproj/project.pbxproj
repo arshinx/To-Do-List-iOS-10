@@ -28,7 +28,7 @@
 		CD8E4ACC1D14FFAE001846EA /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Item.swift; path = ../Item.swift; sourceTree = "<group>"; };
 		CD8E4ACF1D1A46C4001846EA /* TodoFetchedResultsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoFetchedResultsController.swift; sourceTree = "<group>"; };
 		CD8E4AD31D1A4D0B001846EA /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		CDA9480D1D1257EE00AF7454 /* TodoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDA9480D1D1257EE00AF7454 /* LetsDoIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetsDoIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDA948101D1257EE00AF7454 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDA948121D1257EE00AF7454 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CDA948151D1257EE00AF7454 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -62,7 +62,7 @@
 		CDA9480E1D1257EE00AF7454 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CDA9480D1D1257EE00AF7454 /* TodoList.app */,
+				CDA9480D1D1257EE00AF7454 /* LetsDoIt.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -91,9 +91,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CDA9480C1D1257EE00AF7454 /* TodoList */ = {
+		CDA9480C1D1257EE00AF7454 /* LetsDoIt */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CDA9481F1D1257EE00AF7454 /* Build configuration list for PBXNativeTarget "TodoList" */;
+			buildConfigurationList = CDA9481F1D1257EE00AF7454 /* Build configuration list for PBXNativeTarget "LetsDoIt" */;
 			buildPhases = (
 				CDA948091D1257EE00AF7454 /* Sources */,
 				CDA9480A1D1257EE00AF7454 /* Frameworks */,
@@ -103,9 +103,9 @@
 			);
 			dependencies = (
 			);
-			name = TodoList;
+			name = LetsDoIt;
 			productName = TodoList;
-			productReference = CDA9480D1D1257EE00AF7454 /* TodoList.app */;
+			productReference = CDA9480D1D1257EE00AF7454 /* LetsDoIt.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -125,7 +125,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CDA948081D1257EE00AF7454 /* Build configuration list for PBXProject "TodoList" */;
+			buildConfigurationList = CDA948081D1257EE00AF7454 /* Build configuration list for PBXProject "LetsDoIt" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -138,7 +138,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CDA9480C1D1257EE00AF7454 /* TodoList */,
+				CDA9480C1D1257EE00AF7454 /* LetsDoIt */,
 			);
 		};
 /* End PBXProject section */
@@ -313,7 +313,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CDA948081D1257EE00AF7454 /* Build configuration list for PBXProject "TodoList" */ = {
+		CDA948081D1257EE00AF7454 /* Build configuration list for PBXProject "LetsDoIt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CDA9481D1D1257EE00AF7454 /* Debug */,
@@ -322,7 +322,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CDA9481F1D1257EE00AF7454 /* Build configuration list for PBXNativeTarget "TodoList" */ = {
+		CDA9481F1D1257EE00AF7454 /* Build configuration list for PBXNativeTarget "LetsDoIt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CDA948201D1257EE00AF7454 /* Debug */,

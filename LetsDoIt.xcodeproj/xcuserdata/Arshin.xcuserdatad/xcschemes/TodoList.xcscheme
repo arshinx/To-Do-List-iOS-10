@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CDA9480C1D1257EE00AF7454"
-               BuildableName = "TodoList.app"
-               BlueprintName = "TodoList"
-               ReferencedContainer = "container:TodoList.xcodeproj">
+               BuildableName = "LetsDoIt.app"
+               BlueprintName = "LetsDoIt"
+               ReferencedContainer = "container:LetsDoIt.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CDA9480C1D1257EE00AF7454"
-            BuildableName = "TodoList.app"
-            BlueprintName = "TodoList"
-            ReferencedContainer = "container:TodoList.xcodeproj">
+            BuildableName = "LetsDoIt.app"
+            BlueprintName = "LetsDoIt"
+            ReferencedContainer = "container:LetsDoIt.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CDA9480C1D1257EE00AF7454"
-            BuildableName = "TodoList.app"
-            BlueprintName = "TodoList"
-            ReferencedContainer = "container:TodoList.xcodeproj">
+            BuildableName = "LetsDoIt.app"
+            BlueprintName = "LetsDoIt"
+            ReferencedContainer = "container:LetsDoIt.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CDA9480C1D1257EE00AF7454"
-            BuildableName = "TodoList.app"
-            BlueprintName = "TodoList"
-            ReferencedContainer = "container:TodoList.xcodeproj">
+            BuildableName = "LetsDoIt.app"
+            BlueprintName = "LetsDoIt"
+            ReferencedContainer = "container:LetsDoIt.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
